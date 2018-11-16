@@ -16,8 +16,10 @@ router.get('/user/:id/edit', userCtrl.edit)
 router.put('/:id', userCtrl.update)
 router.patch('/:id', userCtrl.update)
 
+//Deck Routes
+
 //Card Routes
 
-//
+
 
 module.exports = router
