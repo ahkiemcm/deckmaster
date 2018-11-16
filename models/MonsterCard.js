@@ -1,7 +1,7 @@
 const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
-const Card = new Schema({
+const MonsterCard = new Schema({
     name: String,
     image: String,
     category: String,
@@ -9,8 +9,8 @@ const Card = new Schema({
     attribute: String,
     stars: Number,
     text: String,
-    attack: Number,
-    defense: Number
+    atk: Number,
+    def: Number
 })
 
-module.exports = mongoose.model('Card', Card)
+module.exports = mongoose.model('Monster', MonsterCard)
