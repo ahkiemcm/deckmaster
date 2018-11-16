@@ -38,22 +38,36 @@ const RedEyesBlkDragon = new MonsterCard({
 })
 
 //Decks
+const Test = new Deck({
+    name: 'Test Deck',
+    category: 'Main Deck',
+    cards: [Kuriboh, RedEyesBlkDragon, ToonWorld]
+})
 
 //Users
 const Xeke = new User({
     username: 'duelmaster - X',
-    password: 'test'
-    // decks: []
+    password: 'test',
+    decks: [Test]
 })
 
-const Zero = new User({
-    username: 'requiemzero',
-    password: 'playstation'
-    // decks: []
-})
+// const Zero = new User({
+//     username: 'requiemzero',
+//     password: 'playstation'
+//     // decks: []
+// })
 
-const Gabe = new User({
-    username: 'bboi_slim',
-    password: 'flare'
-})
+// const Gabe = new User({
+//     username: 'bboi_slim',
+//     password: 'flare'
+// })
 
+User.deleteMany({})
+    //Deletes all current users and contained content
+    .then(() => MonsterCard.insertMany([RedEyesBlkDragon, Kuriboh]))
+    .then(() => Non_MonsterCard.insertMany([ToonWorld]))
+    .then(() => Xeke.save())
+    // Success console prompt
+    .then(() => console.log("Database seeded success"))
+    // Automatically closes mongoose
+    .then(() => mongoose.connection.close())

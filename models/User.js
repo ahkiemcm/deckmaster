@@ -1,5 +1,5 @@
 const mongoose = require('../db/connection')
-const Schema = express.Schema
+const Schema = mongoose.Schema
 
 const User = new Schema({
     username: String,
