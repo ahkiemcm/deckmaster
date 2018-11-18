@@ -4,7 +4,7 @@ class UserCreate extends Component {
     render() {
         return (
             <div>
-                <h1>UserCreate: Create me!</h1>
+                <h2>UserCreate: Create me!</h2>
             </div>
         );
     }
