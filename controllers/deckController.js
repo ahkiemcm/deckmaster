@@ -45,4 +45,4 @@ const deckController = {
     }
 }
 
-module.exports = userController
+module.exports = deckController

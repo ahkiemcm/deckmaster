@@ -11,7 +11,7 @@ const userController = {
     show: (req, res) => {
         User.findById(req.params.userId).populate('decks')
             .then((user) => {
-                res.send(user)
+                res.json(user)
             })
     },
     new: (req, res) => {

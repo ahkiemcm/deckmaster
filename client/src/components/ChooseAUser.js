@@ -10,7 +10,7 @@ class ChooseAUser extends Component {
                         <Link to='/user/5bef3a96afe221030d9c8fe2'>Choose me!</Link>
                 </h3>
                 <h4>We should list all the users in this div</h4>
-                <h3>If there's no user,<Link to='/user/new'> click here!</Link></h3>
+                <h4>If there's no user,<Link to='/user/new'> click here!</Link></h4>
             </div>
         );
     }

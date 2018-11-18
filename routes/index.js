@@ -3,7 +3,7 @@ const router = express.Router()
 const appCtrl = require('../controllers/appController')
 const userCtrl = require('../controllers/userController')
 const deckCtrl = require('../controllers/deckController')
-const cardCtrl = require('../controllers/cardController')
+// const cardCtrl = require('../controllers/cardController')
 
 //Application Index || Splash Page
 router.get('/', appCtrl.index)
@@ -29,9 +29,9 @@ router.put('/user/:userId/deck/:deckId', deckCtrl.update)
 router.patch('/user/:userId/deck/:deckId', deckCtrl.update)
 
 //Card Routes
-router.get('/user/:userId/deck/:deckId:/card', cardCtrl.index)
-router.get('/user/:userId/deck/:deckId/card/:cardId', cardCtrl.show)
-router.delete('/user/:userId/deck/:deckId/card/:cardId', cardCtrl.delete)
+// router.get('/user/:userId/deck/:deckId:/card', cardCtrl.index)
+// router.get('/user/:userId/deck/:deckId/card/:cardId', cardCtrl.show)
+// router.delete('/user/:userId/deck/:deckId/card/:cardId', cardCtrl.delete)
 
 
 module.exports = router
