@@ -38,6 +38,10 @@ class SoloUser extends Component {
 
                 {/* Show some info about the user here. Let's create a state and then map the information based on userId. */}
                 {this.state.user.username}
+                <br />
+                {this.state.user.image}
+                <br />
+                {/* {this.state.user.decks} */}
                 <DeckList />
 
             </div>
