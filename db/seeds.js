@@ -72,12 +72,14 @@ const Test2 = new Deck({
 const Xeke = new User({
     username: 'duelmaster - X',
     password: 'test',
+    image: 'https://via.placeholder.com/200/200',
     decks: [Test]
 })
 
 const Zero = new User({
     username: 'requiemzero',
     password: 'playstation',
+    image: 'https://via.placeholder.com/200/200',
     decks: [Test2]
 })
 
