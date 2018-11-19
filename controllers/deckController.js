@@ -5,11 +5,11 @@ const deckController = {
     index: (req, res) => {
         Deck.find({})
             .then((decks) => {
-                res.send(users)
+                res.send(decks)
             })
     },
     show: (req, res) => {
-        User.findById(req.params.userId).populate('decks')
+        Deck.findById(req.params.userId).populate('decks')
             .then((user) => {
                 res.send(user)
             })

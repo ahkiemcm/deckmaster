@@ -4,6 +4,7 @@ import Homepage from './components/Homepage';
 import Navi from './components/Navi';
 import SoloUser from './components/SoloUser'
 import UserCreate from './components/UserCreate';
+import DeckBuilder from './components/DeckBuilder';
 
 
 class App extends Component {
@@ -13,11 +14,18 @@ class App extends Component {
         <div className="App">
           <Navi />
           <Switch>
-            <Route exact path='/user/new' component={UserCreate} />
+            {/* Deck Builder Page */}
+            <Route exact path='/api/user/:userId/deck/:deckId' component={DeckBuilder} />
+            {/* Create A User Page */}
+            <Route exact path='/api/user/new' component={UserCreate} />
+            {/* Solo User Page */}
             <Route exact path='/api/user/:id' component={SoloUser} />
+            {/* Homepage */}
             <Route path='/' component={Homepage} />
           </Switch>
-          <img src="#" alt="" />
+          <div>
+            <img src="#" alt="" />
+          </div>
 
         </div>
       </Router>

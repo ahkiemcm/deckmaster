@@ -34,17 +34,18 @@ class ChooseAUser extends Component {
             <div>
                 <h3>
                     ChooseAUser:
-                   {this.state.users.map((user) => (
+                {/* Show current users to choose from */}
+                    {this.state.users.map((user) => (
                         <div key={user._id}>
                             <Link to={`/api/user/${user._id}`}>{user.username}</Link>
                         </div>
                     ))}
                 </h3>
-                <h4>We should list all the users in this div</h4>
 
 
 
-                <h4>If there's no user,<Link to='/user/new'> click here!</Link></h4>
+
+                <h4>If there's no user,<Link to='/api/user/new'> click here!</Link></h4>
             </div>
         );
     }

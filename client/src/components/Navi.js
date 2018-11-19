@@ -7,9 +7,7 @@ class Navi extends Component {
             <div>
                 <ul>
                     <li> <Link to='/'>Homepage</Link></li>
-                    <li>User Page</li>
-                    <li>Deck Construction</li>
-                    <li>Card List Page</li>
+
                 </ul>
             </div>
         );

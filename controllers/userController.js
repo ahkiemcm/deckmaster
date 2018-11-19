@@ -18,6 +18,12 @@ const userController = {
 
         res.send("New: I'm new here")
     },
+    create: (req, res) => {
+        User.create(req.body)
+            .then((user) => {
+                res.send(user)
+            })
+    },
     edit: (req, res) => {
         var userEdit = req.params.id
         User.findById(userEdit).then(user => {
@@ -35,12 +41,6 @@ const userController = {
         User.findByIdAndDelete(req.params.userId)
             .then(() => {
                 res.send(200)
-            })
-    },
-    create: (req, res) => {
-        User.create(req.body)
-            .then((user) => {
-                res.send(user)
             })
     }
 }
