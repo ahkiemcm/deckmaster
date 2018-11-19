@@ -9,9 +9,9 @@ const userController = {
             })
     },
     show: (req, res) => {
-        User.findById(req.params.userId).populate('decks')
+        User.findById(req.params.userId)
             .then((user) => {
-                res.json(user)
+                res.send(user)
             })
     },
     new: (req, res) => {

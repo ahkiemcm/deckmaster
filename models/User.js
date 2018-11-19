@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const User = new Schema({
     username: String,
     password: String,
-    decks: []
+    // decks: []
 })
 
 module.exports = mongoose.model('User', User)

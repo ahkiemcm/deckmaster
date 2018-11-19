@@ -19,7 +19,7 @@ class App extends Component {
             {/* Create A User Page */}
             <Route exact path='/api/user/new' component={UserCreate} />
             {/* Solo User Page */}
-            <Route exact path='/api/user/:id' component={SoloUser} />
+            <Route exact path='/api/user/:userId' component={SoloUser} />
             {/* Homepage */}
             <Route path='/' component={Homepage} />
           </Switch>

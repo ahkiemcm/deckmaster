@@ -1,17 +1,32 @@
 import React, { Component } from 'react';
 import DeckList from './DeckList';
+import axios from 'axios'
 
 class SoloUser extends Component {
     state = {
-        user: {
-            username: '',
-            decks: []
-        }
+
+        user: []
+    }
+
+    currentDecks = () => {
+        // make an api call to get one single user
+        // On the server URL is '/api/users/:userId'
+        const userId = this.props.match.params.userId
+        axios.get(`/api/user/${userId}`).then(res => {
+            //   this.setState({
+            //     user: res.data,
+            //     ideas: res.data.ideas
+            console.log(res.data)
+        })
     }
 
     //     We will populate data from our database to display the user's information, and list
     // the decks available at the user's disposal
-    // getCurrentUser =
+    componentDidMount() {
+        this.currentDecks()
+
+    }
+
 
     render() {
         return (
