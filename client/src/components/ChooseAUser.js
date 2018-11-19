@@ -5,7 +5,7 @@ import axios from 'axios'
 
 class ChooseAUser extends Component {
     state = {
-        users: {}
+        users: []
     }
 
     // componentDidMount() {
@@ -35,9 +35,8 @@ class ChooseAUser extends Component {
                 <h3>
                     ChooseAUser:
                    {this.state.users.map((user) => (
-
                         <div key={user._id}>
-                            <Link to={`/user/${user._id}`}>{user.username}</Link>
+                            <Link to={`/api/user/${user._id}`}>{user.username}</Link>
                         </div>
                     ))}
                 </h3>
