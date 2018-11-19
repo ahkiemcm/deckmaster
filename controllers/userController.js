@@ -5,7 +5,7 @@ const userController = {
     index: (req, res) => {
         User.find({})
             .then((users) => {
-                res.send(users)
+                res.json(users)
             })
     },
     show: (req, res) => {
