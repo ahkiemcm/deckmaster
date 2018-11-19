@@ -5,15 +5,27 @@ import axios from 'axios'
 
 class ChooseAUser extends Component {
     state = {
-        users: []
+        users: {}
+    }
+
+    // componentDidMount() {
+    //     axios.get('/users').then(res => {
+    //         this.setState({ users: res.data })
+    //         console.log('res ')
+    //     })
+    // }
+
+    getAllUsers = () => {
+        axios.get('/api/user').then((res) => {
+            console.log(res)
+            this.setState({ users: res.data })
+        })
     }
 
     componentDidMount() {
-        axios.get('/api/users').then(res => {
-            this.setState({ users: res.data })
-            console.log('res.data')
-        })
+        this.getAllUsers()
     }
+
 
     render() {
 
@@ -22,8 +34,11 @@ class ChooseAUser extends Component {
             <div>
                 <h3>
                     ChooseAUser:
-                    {this.state.users.map((user) => (
-                        { 'user': user }
+                   {this.state.users.map((user) => (
+
+                        <div key={user._id}>
+                            <Link to={`/user/${user._id}`}>{user.username}</Link>
+                        </div>
                     ))}
                 </h3>
                 <h4>We should list all the users in this div</h4>

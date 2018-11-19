@@ -14,7 +14,7 @@ class App extends Component {
           <Navi />
           <Switch>
             <Route exact path='/user/new' component={UserCreate} />
-            <Route exact path='/user/:id' component={SoloUser} />
+            <Route exact path='/api/user/:id' component={SoloUser} />
             <Route path='/' component={Homepage} />
           </Switch>
           <img src="#" alt="" />
