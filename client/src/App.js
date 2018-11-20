@@ -12,8 +12,8 @@ import logo from './img/Milennium_Ring_Icon_Colored.png'
 const Body = styled.div`
 background-color: #D1C4E9;
 color: gold;
-height: 95vh;
-width: 95vw;
+height: cover;
+width: cover;
 border: solid thick black;
 `
 const MasterLogo = styled.div`
