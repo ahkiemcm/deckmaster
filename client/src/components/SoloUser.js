@@ -11,7 +11,7 @@ class SoloUser extends Component {
         user: {}
     }
 
-    currentDecks = () => {
+    currentUser = () => {
         // make an api call to get one single user
         // On the server URL is '/api/users/:userId'
         const userId = this.props.match.params.userId
@@ -30,7 +30,7 @@ class SoloUser extends Component {
     //     We will populate data from our database to display the user's information, and list
     // the decks available at the user's disposal
     componentDidMount = () => {
-        this.currentDecks()
+        this.currentUser()
 
     }
 
@@ -39,7 +39,7 @@ class SoloUser extends Component {
         return (
             <div>
 
-                {/* Show some info about the user here. Let's create a state and then map the information based on userId. */}
+                {/* Shows some info about the user here. */}
                 <h1>{this.state.user.username}</h1>
                 <br />
                 {this.state.user.image}
