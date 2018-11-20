@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DeckList from './DeckList';
+import DeleteUser from './DeleteUser'
 import axios from 'axios'
-
 
 
 
@@ -48,7 +48,7 @@ class SoloUser extends Component {
 
                     <DeckList {...this.props} />
                 </div>
-
+                <DeleteUser {...this.props} />
             </div>
         );
     }

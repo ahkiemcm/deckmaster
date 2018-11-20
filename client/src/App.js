@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Homepage from './components/Homepage';
-// import Navi from './components/Navi';
 import SoloUser from './components/SoloUser'
 import UserCreate from './components/UserCreate';
 import DeckBuilder from './components/DeckBuilder';
@@ -35,7 +34,6 @@ class App extends Component {
           <Link to='/'>
             <MasterLogo />
           </Link>
-          {/* <Navi />  */}
           <Switch>
             {/* Deck Builder Page */}
             <Route exact path='/user/:userId/deck/:deckId' component={DeckBuilder} />
