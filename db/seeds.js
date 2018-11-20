@@ -90,9 +90,9 @@ const Zero = new User({
 
 //Deletes all current users and contained content
 User.deleteMany({})
-Deck.deleteMany({})
-MonsterCard.deleteMany({})
-Non_MonsterCard.deleteMany({})
+    .then(Deck.deleteMany({}))
+    .then(MonsterCard.deleteMany({}))
+    .then(Non_MonsterCard.deleteMany({}))
     //Creates all instances...
     .then(() => MonsterCard.insertMany([RedEyesBlkDragon, Kuriboh, CelticWarrior]))
     .then(() => Non_MonsterCard.insertMany([ToonWorld, M_Reborn]))

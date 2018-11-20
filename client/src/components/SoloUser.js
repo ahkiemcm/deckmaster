@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import DeckList from './DeckList';
 import axios from 'axios'
 
+
+
+
 class SoloUser extends Component {
     state = {
 
@@ -41,8 +44,10 @@ class SoloUser extends Component {
                 <br />
                 {this.state.user.image}
                 <br />
-                {/* {this.state.user.decks} */}
-                <DeckList {...this.props} />
+                <div>
+
+                    <DeckList {...this.props} />
+                </div>
 
             </div>
         );

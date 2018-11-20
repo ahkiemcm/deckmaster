@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+// import React, { Component } from 'react';
+// import { Link } from 'react-router-dom'
 
-class Navi extends Component {
-    render() {
-        return (
-            <div>
-                <ul>
-                    <li> <Link to='/'>Homepage</Link></li>
+// class Navi extends Component {
+//     render() {
+//         return (
+//             <div>
+//                 <ul>
+//                     <li> <Link to='/'>Homepage</Link></li>
 
-                </ul>
-            </div>
-        );
-    }
-}
+//                 </ul>
+//             </div>
+//         );
+//     }
+// }
 
-export default Navi;
+// export default Navi;
