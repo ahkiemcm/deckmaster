@@ -4,21 +4,21 @@ import axios from 'axios'
 class DeleteUser extends Component {
 
 
-    // byeByeUser = () => {
-    //     axios.delete(`/user/${this.props.user._id}`)
-    //         .then(res => {
-    //             console.log(res)
-    //             console.log(res.data)
-    //         })
-    // }
+    handleClick = () => {
+        axios.delete(`/user/${this.props.match.params.userId}`)
+            .then(res => {
+                console.log(res)
+                console.log(res.data)
+                this.props.history.push('/user')
+            })
+    }
 
     render() {
         return (
             <div>
-                {/* <button onClick={byeByeUser}>
+                <button onClick={this.handleClick}>
                     DELETE THIS USER
-                </button> */}
-                Blah
+                </button>
             </div>
         );
     }
