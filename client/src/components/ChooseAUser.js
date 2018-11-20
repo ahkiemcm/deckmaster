@@ -8,13 +8,6 @@ class ChooseAUser extends Component {
         users: []
     }
 
-    // componentDidMount() {
-    //     axios.get('/users').then(res => {
-    //         this.setState({ users: res.data })
-    //         console.log('res ')
-    //     })
-    // }
-
     getAllUsers = () => {
         axios.get('/api/user').then((res) => {
             console.log(res)

@@ -42,7 +42,7 @@ class SoloUser extends Component {
                 {this.state.user.image}
                 <br />
                 {/* {this.state.user.decks} */}
-                <DeckList />
+                <DeckList {...this.props} />
 
             </div>
         );
