@@ -5,13 +5,30 @@ import Navi from './components/Navi';
 import SoloUser from './components/SoloUser'
 import UserCreate from './components/UserCreate';
 import DeckBuilder from './components/DeckBuilder';
+import styled from 'styled-components'
+
+
+const Body = styled.div`
+background-color: #D1C4E9;
+color: gold;
+height: 95vh;
+width: 95vw;
+border: solid thick black;
+`
+const Logo = styled.div`
+height: 300px;
+width: 300px;
+background-image: url('');
+`
+
 
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <Body>
+          <Logo />
           <Navi />
           <Switch>
             {/* Deck Builder Page */}
@@ -27,7 +44,7 @@ class App extends Component {
             <img src="#" alt="" />
           </div>
 
-        </div>
+        </Body>
       </Router>
     );
   }
