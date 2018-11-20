@@ -7,9 +7,21 @@ class UserCreate extends Component {
     state = {
         newUser: {
             username: '',
-            password: ''
+            password: '',
+            email: ''
         }
     }
+
+    handleChange = (event) => {
+        console.log('name', event.target.name)
+        console.log('value', event.target.value)
+        const updatedNewUser = { ...this.state.newUser }
+
+        // Event Target Name will be either 'username' or 'password'
+        updatedNewUser[event.target.name] = event.target.value
+        this.setState({ newUser: updatedNewUser })
+    }
+
 
     handleSubmit = (event) => {
         event.preventDefault()
@@ -29,11 +41,15 @@ class UserCreate extends Component {
                 <h2>UserCreate:
                 </h2>
                 <form onSubmit={this.handleSubmit}>
-                    Username:
-                    <input type="text" name="username" id="" />
+                    <div>
+                        <label htmlFor="username">User Name: </label>
+                        <input onChange={this.handleChange} value={this.state.newUser.username} type="text" name="username" />
+                    </div>
                     <br />
-                    Password:
-                    <input type="text" name="password" id="" />
+                    <div>
+                        <label htmlFor="password">Password: </label>
+                        <input onChange={this.handleChange} value={this.state.newUser.password} type="password" name="password" />
+                    </div>
                     <br />
                     Email:
                     <input type="text" name="email" id="" />
