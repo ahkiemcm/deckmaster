@@ -9,17 +9,10 @@ class DeckList extends Component {
 
     }
 
-    // getDecks = () => {
-    //     axios.get(`/api/user/${userId}/deck`).then((res) => {
-    //         console.log(res)
-    //         this.setState({ decks: res.data })
-    //     })
-    // }
-
     componentDidMount() {
         // this.getDecks() 
         const userId = this.props.match.params.userId
-        axios.get(`/api/user/${userId}/deck`).then((res) => {
+        axios.get(`/user/${userId}/deck`).then((res) => {
             console.log(res.data)
             this.setState({ decks: res.data })
         })
@@ -37,7 +30,7 @@ class DeckList extends Component {
 
                 {/* We are gonna need to fix our controller for this one. We will get assistance for this... */}
                 {/* But we are gonna show all decks that belong to the user based on the user's Id. */}
-                <Link to='/api/user/:userId/deck/:deckId'>
+                <Link to='/user/:userId/deck/:deckId'>
                     <h4>Look, here's one now!</h4>
                 </Link>
 

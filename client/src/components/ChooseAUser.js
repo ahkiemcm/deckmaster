@@ -9,7 +9,7 @@ class ChooseAUser extends Component {
     }
 
     getAllUsers = () => {
-        axios.get('/api/user').then((res) => {
+        axios.get('/user').then((res) => {
             console.log(res)
             this.setState({ users: res.data })
         })
@@ -30,7 +30,7 @@ class ChooseAUser extends Component {
                 {/* Show current users to choose from */}
                     {this.state.users.map((user) => (
                         <div key={user._id}>
-                            <Link to={`/api/user/${user._id}`}>{user.username}</Link>
+                            <Link to={`/user/${user._id}`}>{user.username}</Link>
                         </div>
                     ))}
                 </h3>
@@ -38,7 +38,7 @@ class ChooseAUser extends Component {
 
 
 
-                <h4>If there's no user,<Link to='/api/user/new'> click here!</Link></h4>
+                <h4>If there's no user,<Link to='/user/new'> click here!</Link></h4>
             </div>
         );
     }

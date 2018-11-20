@@ -38,11 +38,11 @@ class App extends Component {
           <Navi />
           <Switch>
             {/* Deck Builder Page */}
-            <Route exact path='/api/user/:userId/deck/:deckId' component={DeckBuilder} />
+            <Route exact path='/user/:userId/deck/:deckId' component={DeckBuilder} />
             {/* Create A User Page */}
-            <Route exact path='/api/user/new' component={UserCreate} />
+            <Route exact path='/user/new' component={UserCreate} />
             {/* Solo User Page */}
-            <Route exact path='/api/user/:userId' component={SoloUser} />
+            <Route exact path='/user/:userId' component={SoloUser} />
             {/* Homepage */}
             <Route path='/' component={Homepage} />
           </Switch>
