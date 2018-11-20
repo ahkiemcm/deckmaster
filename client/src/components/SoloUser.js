@@ -37,7 +37,7 @@ class SoloUser extends Component {
             <div>
 
                 {/* Show some info about the user here. Let's create a state and then map the information based on userId. */}
-                {this.state.user.username}
+                <h1>{this.state.user.username}</h1>
                 <br />
                 {this.state.user.image}
                 <br />

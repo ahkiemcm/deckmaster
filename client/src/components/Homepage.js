@@ -5,7 +5,7 @@ class Homepage extends Component {
     render() {
         return (
             <div>
-                <h1>Homepage: Welcome home!</h1>
+                <h1>Welcome to -DeckMaster-</h1>
                 <ChooseAUser />
             </div>
         );

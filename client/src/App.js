@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Homepage from './components/Homepage';
 import Navi from './components/Navi';
 import SoloUser from './components/SoloUser'
 import UserCreate from './components/UserCreate';
 import DeckBuilder from './components/DeckBuilder';
 import styled from 'styled-components'
+import logo from './img/Milennium_Ring_Icon_Colored.png'
 
 
 const Body = styled.div`
@@ -15,10 +16,13 @@ height: 95vh;
 width: 95vw;
 border: solid thick black;
 `
-const Logo = styled.div`
-height: 300px;
-width: 300px;
-background-image: url('');
+const MasterLogo = styled.div`
+margin-left: 420px;
+height: 200px;
+width: 200px;
+background-color: gray;
+border: dashed black;
+background-image: url(${logo});
 `
 
 
@@ -28,7 +32,9 @@ class App extends Component {
     return (
       <Router>
         <Body>
-          <Logo />
+          <Link to='/'>
+            <MasterLogo />
+          </Link>
           <Navi />
           <Switch>
             {/* Deck Builder Page */}
