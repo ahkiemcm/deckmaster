@@ -4,7 +4,7 @@ class CardShowcase extends Component {
     render() {
         return (
             <div>
-                <h3>CardShowcase: We got hella cards!</h3>
+                <h3>UNDER CONSTRUCTION: CARDS COMING SOON...</h3>
             </div>
         );
     }

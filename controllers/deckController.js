@@ -1,4 +1,5 @@
 const Deck = require('../models/Deck')
+const User = require('../models/User')
 
 
 const deckController = {
@@ -14,10 +15,7 @@ const deckController = {
                 res.send(user)
             })
     },
-    new: (req, res) => {
 
-        res.send("New: I'm new here")
-    },
     edit: (req, res) => {
         var userEdit = req.params.id
         User.findById(userEdit).then(user => {
@@ -32,15 +30,20 @@ const deckController = {
             })
     },
     delete: (req, res) => {
-        User.findByIdAndDelete(req.params.userId)
+        Deck.findByIdAndDelete(req.params.deckId)
             .then(() => {
                 res.send(200)
             })
     },
     create: (req, res) => {
-        User.create(req.body)
+        User.findById(req.params.userId)
             .then((user) => {
-                res.send(user)
+                Deck.create(req.body)
+                    .then((newDeck) => {
+                        user.decks.push(newDeck)
+                        user.save()
+                        res.send(newDeck)
+                    })
             })
     }
 }
