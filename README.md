@@ -19,6 +19,18 @@ The purpose of -DeckMaster- is to assist the user in building and tracking tradi
 ## ERD
 ![ERD](ERDs-Wireframes/deckmaster-erd.png)
 
+## Technologies Used
+Front-End
+- React.js
+- Styled-Components
+- Axios
+- React-router-dom
+
+Back-End
+- Express.js
+- Node.js
+- MongoDB / Mongoose
+
    
 
 ## Remarks
