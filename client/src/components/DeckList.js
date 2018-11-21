@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import DeckCreate from './DeckCreate';
-import DeleteDeck from './DeleteDeck';
 
 // import styled from 'styled-components'
 
@@ -32,13 +31,12 @@ class DeckList extends Component {
                 {this.state.decks.map((deck) => (
 
                     <div key={deck._id}>
-                        <Link to={`/user/:userId/deck/${deck._id}`}>
+                        <Link to={`/user/${this.props.match.params.userId}/deck/${deck._id}`}>
                             {deck.name}
                         </Link>
                     </div>
                 ))}
                 <DeckCreate {...this.props} />
-                <DeleteDeck {...this.props} />
             </div>
         );
     }

@@ -23,10 +23,6 @@ router.get('/user/:userId/deck', deckCtrl.index)
 router.get('/user/:userId/deck/:deckId', deckCtrl.show)
 router.post('/user/:userId/deck', deckCtrl.create)
 router.delete('/user/:userId/deck/:deckId', deckCtrl.delete)
-// router.get('/user/:userId/deck/new', deckCtrl.new)
-// router.get('/user/:userId/deck/:deckId/edit', deckCtrl.edit)
-// router.put('/user/:userId/deck/:deckId', deckCtrl.update)
-// router.patch('/user/:userId/deck/:deckId', deckCtrl.update)
 
 //Card Routes
 // router.get('/user/:userId/deck/:deckId:/card', cardCtrl.index)

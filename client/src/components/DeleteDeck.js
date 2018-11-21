@@ -5,12 +5,15 @@ class DeleteDeck extends Component {
 
 
     handleClick = () => {
-
-        axios.delete(`/user/${this.props.match.params.deckId}`)
+        var deckId = this.props.match.params.deckId
+        console.log(deckId)
+        axios.delete(`/user/:userId/deck/${deckId}`)
             .then(res => {
+                var userId = this.props.match.params.userId
+                console.log(userId)
                 console.log(res)
                 console.log(res.data)
-                this.props.history.push('/')
+                this.props.history.push('/user/:userId')
             })
     }
 
@@ -20,7 +23,7 @@ class DeleteDeck extends Component {
                 <button onClick={this.handleClick}>
                     DELETE THIS DECK
                 </button>
-            </div>
+            </div >
         );
     }
 }

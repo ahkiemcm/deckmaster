@@ -15,20 +15,6 @@ const deckController = {
                 res.send(user)
             })
     },
-
-    edit: (req, res) => {
-        var userEdit = req.params.id
-        User.findById(userEdit).then(user => {
-            res.render('/user/:id/edit', { user: user })
-        })
-    },
-    update: (req, res) => {
-        User.findByIdAndUpdate(req.params.userId, req.body)
-            .then((updatedUser) => {
-                updatedUser.save()
-                res.send(updatedUser)
-            })
-    },
     delete: (req, res) => {
         Deck.findByIdAndDelete(req.params.deckId)
             .then(() => {
