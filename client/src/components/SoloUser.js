@@ -27,7 +27,7 @@ class SoloUser extends Component {
 
 
 
-    //     We will populate data from our database to display the user's information, and list
+    // We will populate data from our database to display the user's information, and list
     // the decks available at the user's disposal
     componentDidMount = () => {
         this.currentUser()

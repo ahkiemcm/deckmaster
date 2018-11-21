@@ -10,17 +10,17 @@ import logo from './img/Milennium_Ring_Icon_Colored.png'
 
 const Body = styled.div`
 background-color: #D1C4E9;
-color: gold;
-height: cover;
+color: black;
+height: 100%;
 width: cover;
 border: solid thick black;
 `
 const MasterLogo = styled.div`
-margin-left: 420px;
+margin-left: 450px;
 height: 200px;
 width: 200px;
 background-color: gray;
-border: dashed black;
+border: rgb(0,0,0, .4) solid 12px;
 background-image: url(${logo});
 `
 

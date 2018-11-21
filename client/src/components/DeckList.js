@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import DeckCreate from './DeckCreate';
 
-// import styled from 'styled-components'
+import styled from 'styled-components'
 
+const DeckBox = styled.div`
+border: rgb(0,0,0, .6) 10px ridge;
+`
 
 
 
@@ -16,7 +19,7 @@ class DeckList extends Component {
     }
 
     componentDidMount() {
-        // Get decks 
+        // Get decks and set the state to contain the response data.
         const userId = this.props.match.params.userId
         axios.get(`/user/${userId}/deck`).then((res) => {
             console.log(res.data)
@@ -26,8 +29,8 @@ class DeckList extends Component {
 
     render() {
         return (
-            <div>
-                <h3>Deck List</h3>
+            <DeckBox>
+                <h2>Deck List</h2>
                 {this.state.decks.map((deck) => (
 
                     <div key={deck._id}>
@@ -37,7 +40,7 @@ class DeckList extends Component {
                     </div>
                 ))}
                 <DeckCreate {...this.props} />
-            </div>
+            </DeckBox>
         );
     }
 }

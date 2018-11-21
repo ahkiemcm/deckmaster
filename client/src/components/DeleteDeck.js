@@ -3,7 +3,7 @@ import axios from 'axios'
 
 class DeleteDeck extends Component {
 
-
+    //On click, delete the deck and redirect
     handleClick = () => {
         var deckId = this.props.match.params.deckId
         console.log(deckId)

@@ -3,6 +3,7 @@ import axios from 'axios'
 
 class DeleteUser extends Component {
 
+    //On click, delete the user and redirect
 
     handleClick = () => {
         axios.delete(`/user/${this.props.match.params.userId}`)

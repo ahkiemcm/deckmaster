@@ -9,6 +9,8 @@ class DeckCreate extends Component {
         }
     }
 
+
+    //Collect information from keystrokes.
     handleChange = (event) => {
         console.log('name', event.target.name)
         console.log('value', event.target.value)
@@ -20,20 +22,13 @@ class DeckCreate extends Component {
         console.log(this.state)
     }
 
-
-    handleSubmit = (event) => {
-        // event.preventDefault()
+    //When submit button is pressed, run this function to post the collected data to its respective user
+    handleSubmit = () => {
         const userId = this.props.match.params.userId
         console.log(userId)
         console.log(this.state)
         // Make post to our api to create new deck
         axios.post(`/user/${userId}/deck`, this.state.newDeck);
-        console.log('Axios suxx')
-        // .then(res => {
-        //     // when we get that data back, we need to navigate to the new deck's page
-        //     console.log(res.data)
-        //     this.props.history.push(`/user/${userId}/deck/${res.data._id}`)
-        // })
 
     }
 

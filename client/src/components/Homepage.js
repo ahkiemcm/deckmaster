@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import ChooseAUser from './ChooseAUser';
 import styled from 'styled-components'
-import splash from '../img/yu-gi-oh-yugi-and-monsters-i30571.jpg'
+import splash from '../img/superSplash.jpg'
 
 const Splash = styled.div`
-margin-left: 300px;
-height: 600px;
-width: 480px;
-/* background-color: gray; */
-border: dashed black;
+margin-left: 25px;
+height: 768px;
+width: 1024px;
+border: solid black 20px;
 background-image: url(${splash});
+`
+const Welcome = styled.h1`
+margin-left: 340px;
 `
 
 class Homepage extends Component {
@@ -17,7 +19,7 @@ class Homepage extends Component {
         return (
             <div>
                 <Splash />
-                <h1>Welcome to -DeckMaster-</h1>
+                <Welcome>Welcome to -DeckMaster-</Welcome>
                 <ChooseAUser />
             </div>
         );
