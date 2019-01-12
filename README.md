@@ -2,7 +2,6 @@
 The purpose of -DeckMaster- is to assist the user in building and tracking trading card decks.
 
 ### Links
-- https://github.com/ahkiemcm/deckmaster [GitHub]
 - https://trello.com/b/5r8ZrohV/x-project-3-deckmaster [Trello-Board]
 - https://deck-master.herokuapp.com/ [Heroku-Site]
 
