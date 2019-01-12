@@ -14,7 +14,7 @@ class ChooseAUser extends Component {
     }
     //Call the user and set the state to the data recieved in response
     getAllUsers = () => {
-        axios.get('/user').then((res) => {
+        axios.get('/api/user').then((res) => {
             console.log(res)
             this.setState({ users: res.data })
         })

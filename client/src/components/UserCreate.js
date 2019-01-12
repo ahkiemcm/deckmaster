@@ -27,7 +27,7 @@ class UserCreate extends Component {
         event.preventDefault()
 
         // Make post to our api to create new user
-        axios.post('/user', this.state.newUser).then(res => {
+        axios.post('/api/user', this.state.newUser).then(res => {
             // when we get that data back, we need to navigate to the new users page
             console.log(res.data)
             this.props.history.push(`/user/${res.data._id}`)

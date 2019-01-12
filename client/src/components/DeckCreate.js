@@ -28,7 +28,7 @@ class DeckCreate extends Component {
         console.log(userId)
         console.log(this.state)
         // Make post to our api to create new deck
-        axios.post(`/user/${userId}/deck`, this.state.newDeck);
+        axios.post(`/api/user/${userId}/deck`, this.state.newDeck);
 
     }
 

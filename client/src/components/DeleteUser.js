@@ -6,7 +6,7 @@ class DeleteUser extends Component {
     //On click, delete the user and redirect
 
     handleClick = () => {
-        axios.delete(`/user/${this.props.match.params.userId}`)
+        axios.delete(`/api/user/${this.props.match.params.userId}`)
             .then(res => {
                 console.log(res)
                 console.log(res.data)

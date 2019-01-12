@@ -7,7 +7,7 @@ class DeleteDeck extends Component {
     handleClick = () => {
         var deckId = this.props.match.params.deckId
         console.log(deckId)
-        axios.delete(`/user/:userId/deck/${deckId}`)
+        axios.delete(`/api/user/:userId/deck/${deckId}`)
             .then(res => {
                 var userId = this.props.match.params.userId
                 console.log(userId)
