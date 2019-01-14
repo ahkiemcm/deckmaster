@@ -13,7 +13,7 @@ class DeleteDeck extends Component {
                 console.log(userId)
                 console.log(res)
                 console.log(res.data)
-                this.props.history.push('/user/:userId')
+                this.props.history.push(`/user/${userId}`)
             })
     }
 

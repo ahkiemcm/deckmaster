@@ -4,15 +4,16 @@ const User = require('../models/User')
 
 const deckController = {
     index: (req, res) => {
-        Deck.find({})
-            .then((decks) => {
-                res.send(decks)
+        var userId = req.params.userId
+        User.findById(userId).populate('decks')
+            .then((user) => {
+                res.send(user.decks)
             })
     },
     show: (req, res) => {
-        Deck.findById(req.params.userId).populate('decks')
-            .then((user) => {
-                res.send(user)
+        Deck.findById(req.params.deckId)
+            .then((deck) => {
+                res.send(deck)
             })
     },
     delete: (req, res) => {

@@ -52,10 +52,10 @@ class UserCreate extends Component {
                     </div>
                     <br />
                     Email:
-                    <input type="text" name="email" id="" />
+                    <input type="text" name="email" />
                     <br />
                     Sign up for email notifications about updates and offers?:
-                    <input type="checkbox" name="newsletter" id="" />
+                    <input type="checkbox" name="newsletter" />
                     <br />
                     <button type="submit">Create User</button>
                 </form>

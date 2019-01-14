@@ -23,12 +23,14 @@ class DeckCreate extends Component {
     }
 
     //When submit button is pressed, run this function to post the collected data to its respective user
-    handleSubmit = () => {
+    handleSubmit = (event) => {
+
         const userId = this.props.match.params.userId
         console.log(userId)
         console.log(this.state)
         // Make post to our api to create new deck
-        axios.post(`/api/user/${userId}/deck`, this.state.newDeck);
+        axios.post(`/api/user/${userId}/deck`, this.state.newDeck)
+            .then(console.log(this.state))
 
     }
 
@@ -45,7 +47,13 @@ class DeckCreate extends Component {
                     <br />
                     <div>
                         <label htmlFor="category">Category: </label>
-                        <input onChange={this.handleChange} value={this.state.newDeck.category} type="text" name="category" />
+                        <select onChange={this.handleChange} value={this.state.newDeck.category} name="category">
+                            <option value="None"></option>
+                            <option value="Main">Main Deck</option>
+                            <option value="Side">Side Deck</option>
+                            <option value="Extra">Extra</option>
+
+                        </select>
                     </div>
                     <br />
 

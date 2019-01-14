@@ -27,8 +27,8 @@ class SoloUser extends Component {
         const userId = this.props.match.params.userId
         axios.get(`/api/user/${userId}`).then(res => {
             this.setState({ user: res.data })
-            console.log(res)
-            console.log(this.state)
+            // console.log(res)
+            // console.log(this.state)
         })
     }
 
