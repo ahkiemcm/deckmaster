@@ -32,7 +32,7 @@ class DeckCreate extends Component {
         axios.post(`/api/user/${userId}/deck`, this.state.newDeck)
             .then(res => {
                 console.log(res)
-                this.props.history.push(`/user/${userId}/${res.data._id}`)
+                this.props.history.push(`/user/${userId}`)
 
             })
 
