@@ -16,7 +16,7 @@ width: cover;
 border: solid thick black;
 `
 const MasterLogo = styled.div`
-margin-left: 450px;
+margin-left: 600px;
 height: 200px;
 width: 200px;
 background-color: gray;

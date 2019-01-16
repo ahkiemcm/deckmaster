@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import splash from '../img/superSplash.jpg'
 
 const Splash = styled.div`
-margin-left: 25px;
+margin-left: 180px;
 height: 768px;
 width: 1024px;
 border: solid black 20px;
